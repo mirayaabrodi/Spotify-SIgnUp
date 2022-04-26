@@ -18,6 +18,7 @@
 body {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-image: linear-gradient(135deg, rgb(32, 32, 32) 0%, #333 100%);
@@ -45,6 +46,7 @@ body {
 
 .container {
   display: flex;
+padding-bottom: 100px;
 }
 
 /* Subscription  */
@@ -230,3 +232,50 @@ color: #10262d;
 box-shadow: 2px 2px 20px rgba(19, 19, 19, 0.364);
 transition: all .3s ease;
 }
+
+
+
+/* Footer */
+
+.footer {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+  }
+  
+  .footer-link,
+  .footer-link:visited {
+	text-decoration: none;
+	color: var(--white);
+	font-size: 1rem;
+	font-weight: 600;
+	letter-spacing: 0.1rem;
+	transition: all 0.3s ease;
+	display: inline-block;
+	position: relative;
+  }
+  
+  .footer-link::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 3px;
+  background-image: linear-gradient(
+    150deg,
+    var(--card-light-green) 0%,
+    var(--card-dark-green) 100%
+  );	position: absolute;
+	bottom: 10%;
+	z-index: -1;
+	transition: all 0.3s ease;
+	border-radius: 1px;
+  }
+  
+  .footer-link:hover {
+	transition: all 0.3s ease;
+  color: #333;
+  }
+  
+  .footer-link:hover::after {
+	height: 17px;
+  }
